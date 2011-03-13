@@ -18,7 +18,10 @@ class PI
 end
 
 PI::digits do |digit|
-  notes = ['c', 'd', 'e', 'f', 'g', 'a', 'b', 'c']
-  note = notes[digit]
-  `afplay #{note}.wav`
+  notes = ['c', 'd', 'e', 'f', 'g', 'a', 'b', 'c', 'd']
+  wav_file = "#{notes[digit-1]}.wav"
+  Thread.new {
+    `afplay #{wav_file}`
+  }
+  sleep(0.2)
 end
