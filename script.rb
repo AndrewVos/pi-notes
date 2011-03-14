@@ -23,5 +23,5 @@ PI::digits do |digit|
   Thread.new {
     `afplay #{wav_file}`
   }
-  sleep(0.2)
+  sleep(0.4)
 end
