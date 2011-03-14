@@ -9,7 +9,6 @@ class PI
       d, d1 = a/b, a1/b1
       while d == d1
         yield d
-        $stdout.flush
         a, a1 = 10*(a%b), 10*(a1%b1)
         d, d1 = a/b, a1/b1
       end
